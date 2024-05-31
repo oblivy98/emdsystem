@@ -39,7 +39,7 @@ public class SecurityConfig {
 
         UserDetails staff = User.withUsername("staff")
                 .password("{noop}12345678")
-                .roles("STAFF")
+                .roles("STAFfF")
                 .build();
         return new InMemoryUserDetailsManager(staff);
     }
