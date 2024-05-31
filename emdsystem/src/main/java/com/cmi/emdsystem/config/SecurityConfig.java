@@ -33,13 +33,12 @@ public class SecurityConfig {
     @Bean
     public UserDetailsService userDetailsService() {
 
-        // Check if staff exists
+        // Check for user
         User user;
-        System.out.println("DUMAANDITOUSERDETAIL");
 
         UserDetails staff = User.withUsername("staff")
                 .password("{noop}12345678")
-                .roles("STAFfF")
+                .roles("STAFF")
                 .build();
         return new InMemoryUserDetailsManager(staff);
     }
